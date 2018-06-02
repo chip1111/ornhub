@@ -21,7 +21,5 @@ Other considerations:
 
 I'm going to wireframe the site on Sketch now, but if anyone wants to start with back-end work, just let me know! 
 
-Finally, anyone got any good ideas about how we communicate for this? A Slack channel maybe? 
-
-
-
+### Team Communication
+[Slack workspace invite link](https://join.slack.com/t/ornsquad/shared_invite/enQtMzc0NTU5MTEzNDQyLTY0Y2I0MDQ0ZTk0MDdhNjRkYmM3MjliMjM1YjdmMmI4Mjc2YzU2YzhiYzgxMGM4N2Y0Y2JkOWI3ODU0MjU0ODQ)
