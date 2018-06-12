@@ -1,0 +1,238 @@
+// Typography Resets
+
+h1,h2,h3,h4,h5,h6,button,label,p,p strong,p em,strong,a,em,span,li,div,ul
+  font-family: $font
+  color: lighten($dark,10)
+  margin: 0
+  +font-smoothing
+
+h1,h2,h3,h4,h5
+  line-height: 1
+  +thick
+
+input,textarea
+  font-family: $font
+  color: $dark
+  -webkit-appearance: none !important
+  +font-smoothing
+  +default
+
+p
+  margin-bottom: 1em
+  line-height: 1.3
+  +normal
+
+p strong
+  +bold
+
+p em
+  font-style: italic !important
+
+p:last-child
+  margin-bottom: 0
+
+a
+  color: $variant
+  text-decoration: none
+
+a:hover
+  color: lighten($variant,5)
+
+i:before
+  +font-smoothing
+  +normal
+
+
+// Behavioural Resets
+
+a:active,
+a:focus,
+.button,
+.hollow-button,
+input[type=submit],
+button
+  outline: none !important
+
+
+// Buttons & Inputs
+
+.button,
+.hollow-button,
+input[type=submit],
+button
+  display: inline-block
+  line-height: 1.2
+  padding: 12px 18px
+  border: 1px solid $button
+  background: $button
+  color: $dark
+  font-size: 14px
+  +bold
+  +border-box
+  +rounded(3px)
+  +transition(all,0.2s)
+
+  &:hover
+    background: lighten($button,3)
+    border: 1px solid lighten($button,3)
+    color: #fff
+
+  &:active
+    background: $button !important
+    border: 1px solid $button !important
+    color: #fff !important
+
+  &:focus
+    background: $button !important
+    border: 1px solid $button !important
+    color: #fff !important
+
+  i:before
+    font-size: 0.9em
+
+  &.warning
+    background: $error !important
+    border-color: $error !important
+    color: #fff !important
+
+.hollow-button,
+input[type=submit].hollow-button
+  background: none !important
+  color: darken($light,20) !important
+  border: 1px solid darken($light,10) !important
+
+  &:hover
+    background: none
+    color: darken($light,40) !important
+    border: 1px solid darken($light,20) !important
+
+  &:active
+    background: none !important
+    color: darken($light,40) !important
+    border: 1px solid darken($light,30)
+
+  &:focus
+    background: none !important
+    color: darken($light,40) !important
+    border: 1px solid darken($light,30)
+
+.green-glow-button
+  @extend .button
+
+.definitely-green-button,
+input[type=submit].definitely-green-button
+  background: $green !important
+  border-color: $green !important
+  color: $dark !important
+  +shadow(0,2px,30px,rgba($green,0.33))
+
+  &:hover
+    background: lighten($green,5) !important
+    color: $dark !important
+    border: 1px solid lighten($green,5) !important
+
+  &:active
+    background: lighten($green,5) !important
+    color: $dark !important
+    border: 1px solid lighten($green,5) !important
+
+  &:focus
+    background: lighten($green,5) !important
+    color: $dark !important
+    border: 1px solid lighten($green,5) !important
+
+.yellow-button
+  background: $alert !important
+  border-color: $alert !important
+  color: $dark !important
+  margin-right: 0 !important
+
+.facebook-button
+  background: #3b5998 !important
+  border-color: #3b5998 !important
+
+  i
+    margin-right: 5px
+
+.delete-button
+  background: $error !important
+  border-color: $error !important
+  @extend .button
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=tel],
+select,
+textarea
+  border: 0px solid darken($light,10)
+  background: darken($light,2)
+  padding: 14px 16px
+  font-size: 16px
+  display: inline-block
+  line-height: normal !important
+  outline: none !important
+  width: 100%
+  +transition(all,0.2s)
+  +rounded(3px)
+  +border-box
+  +normal
+
+  +breakpoint(mobile)
+    float: none !important
+    display: block !important
+    width: 100% !important
+
+textarea
+  margin-bottom: 5px
+  line-height: 1.3 !important
+  padding: 14px
+  height: 300px
+
+.button.delete-button
+  background: $error !important
+  border-color: $error !important
+  color: #fff !important
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=url],
+input[type=number],
+input[type=tel],
+textarea
+
+  &:focus
+    box-shadow: 0 4px 40px rgba($dark,0.07), 0 0 1px rgba($dark,0.1)
+
+input:focus,
+textarea:focus
+  outline: none !important
+  background: #fff
+
+input:-webkit-autofill
+  -webkit-box-shadow: 0 0 0px 1000px darken($light,2) inset
+
+  &:focus
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset, 0 4px 50px darken($light,1), 0 0 1px darken($light,20)
+
+::-moz-selection
+  background: $main
+  color: #fff
+  text-shadow: none
+
+::selection
+  background: $main
+  color: #fff
+  text-shadow: none
+
+::-webkit-input-placeholder
+  color: darken($light,20)
+
+\:-moz-placeholder
+  color: darken($light,20)
+
+::-moz-placeholder
+  color: darken($light,20)
