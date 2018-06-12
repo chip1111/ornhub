@@ -1,0 +1,87 @@
+.growls
+  position: fixed
+  bottom: 0
+  right: 0
+  z-index: 999999
+  -webkit-transform: translate3d(0,500px,0)
+  -moz-transform: translate3d(0,500px,0)
+  transform: translate3d(0,500px,0)
+
+  &.slide-down
+    -webkit-transform: translate3d(0,500px,0)
+    -moz-transform: translate3d(0,500px,0)
+    transform: translate3d(0,500px,0)
+    -webkit-transition: all 0.6s cubic-bezier(.33,-0.24,.2,1)
+    -moz-transition: all 0.6s cubic-bezier(.33,-0.24,.2,1)
+    transition: all 0.6s cubic-bezier(.33,-0.24,.2,1)
+
+    .growl
+      -webkit-transition: all 0.4s cubic-bezier(.33,-0.24,.2,1)
+      -moz-transition: all 0.4s cubic-bezier(.33,-0.24,.2,1)
+      transition: all 0.4s cubic-bezier(.33,-0.24,.2,1)
+      +shadow(0,px,100px,rgba($dark,0.0))
+
+  &.slide-up
+    -webkit-transform: translate3d(0,0px,0)
+    -moz-transform: translate3d(0,0px,0)
+    transform: translate3d(0,0px,0)
+    -webkit-transition: all 0.4s cubic-bezier(.8,0,.4,1.2)
+    -moz-transition: all 0.4s cubic-bezier(.8,0,.4,1.2)
+    transition: all 0.4s cubic-bezier(.8,0,.4,1.2)
+
+    .growl
+      -webkit-transition: all 0.6s cubic-bezier(.8,0,.4,1.2)
+      -moz-transition: all 0.6s cubic-bezier(.8,0,.4,1.2)
+      transition: all 0.6s cubic-bezier(.8,0,.4,1.2)
+      +shadow(0,5px,100px,rgba($dark,0.3))
+
+  +breakpoint(mobile)
+    height: 100%
+    width: 100%
+    overflow-y: scroll
+
+.growl
+  padding: 0
+  width: 280px
+  position: absolute
+  bottom: 20px
+  right: 20px
+  background: $main !important
+  z-index: 99999999999
+  text-align: center
+  overflow: hidden
+  +rounded(5px)
+  +bold
+  +border-box
+
+  svg,img
+    margin-bottom: 10px
+
+  .logo-color
+    fill: lighten($dark,10)
+
+  p
+    font-size: 14px
+    line-height: 1.4
+    margin: 0
+    color: #fff
+
+  +breakpoint(mobile)
+    right: 50%
+    margin-right: -140px
+    bottom: auto
+    top: 90px
+
+.growl-inner
+  padding: 20px
+
+  h4
+    color: $dark
+    margin-bottom: 10px
+    font-size: 30px
+
+  .fa-check
+    color: $green
+
+  .fa-times
+    color: $error

@@ -1,1 +1,21 @@
-%h1 Hello World
+.content
+
+  .content-inner.site-width
+
+    %h1.content-header
+      OrnHub
+      = link_to "New Ornmeme", new_meme_path, class: "button"
+
+    .memes-container
+
+      - Meme.all.sort_by{|m| m.total_score}.reverse.each do |meme|
+
+        .meme-card
+          .meme-card--top
+            = link_to "Upvote", meme_upvote_path(meme)
+            = link_to "Downvote", meme_downvote_path(meme)
+          .meme-card--img
+            = image_tag meme.img_url
+          .meme-card--info
+            Score:
+            = meme.total_score

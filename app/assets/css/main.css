@@ -681,12 +681,16 @@ body {
   color: #F90069 !important; }
 
 .content-inner {
-  padding: 20px 0 80px 0;
-  position: relative;
-  background: #eef0f1; }
+  padding: 40px 0 80px 0;
+  position: relative; }
   @media only screen and (max-width: 1000px) {
     .content-inner {
       padding: 0px 0 100px 0; } }
+
+.content-header {
+  font-size: 42px; }
+  .content-header a {
+    float: right; }
 
 .strike {
   text-decoration: line-through !important; }
@@ -706,6 +710,96 @@ body {
 
 .no-margin {
   margin: 0; }
+
+.growls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 999999;
+  -webkit-transform: translate3d(0, 500px, 0);
+  -moz-transform: translate3d(0, 500px, 0);
+  transform: translate3d(0, 500px, 0); }
+  .growls.slide-down {
+    -webkit-transform: translate3d(0, 500px, 0);
+    -moz-transform: translate3d(0, 500px, 0);
+    transform: translate3d(0, 500px, 0);
+    -webkit-transition: all 0.6s cubic-bezier(0.33, -0.24, 0.2, 1);
+    -moz-transition: all 0.6s cubic-bezier(0.33, -0.24, 0.2, 1);
+    transition: all 0.6s cubic-bezier(0.33, -0.24, 0.2, 1); }
+    .growls.slide-down .growl {
+      -webkit-transition: all 0.4s cubic-bezier(0.33, -0.24, 0.2, 1);
+      -moz-transition: all 0.4s cubic-bezier(0.33, -0.24, 0.2, 1);
+      transition: all 0.4s cubic-bezier(0.33, -0.24, 0.2, 1);
+      -webkit-box-shadow: 0 px 100px rgba(29, 37, 42, 0);
+      -moz-box-shadow: 0 px 100px rgba(29, 37, 42, 0);
+      -o-box-shadow: 0 px 100px rgba(29, 37, 42, 0);
+      box-shadow: 0 px 100px rgba(29, 37, 42, 0); }
+  .growls.slide-up {
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+    -webkit-transition: all 0.4s cubic-bezier(0.8, 0, 0.4, 1.2);
+    -moz-transition: all 0.4s cubic-bezier(0.8, 0, 0.4, 1.2);
+    transition: all 0.4s cubic-bezier(0.8, 0, 0.4, 1.2); }
+    .growls.slide-up .growl {
+      -webkit-transition: all 0.6s cubic-bezier(0.8, 0, 0.4, 1.2);
+      -moz-transition: all 0.6s cubic-bezier(0.8, 0, 0.4, 1.2);
+      transition: all 0.6s cubic-bezier(0.8, 0, 0.4, 1.2);
+      -webkit-box-shadow: 0 5px 100px rgba(29, 37, 42, 0.3);
+      -moz-box-shadow: 0 5px 100px rgba(29, 37, 42, 0.3);
+      -o-box-shadow: 0 5px 100px rgba(29, 37, 42, 0.3);
+      box-shadow: 0 5px 100px rgba(29, 37, 42, 0.3); }
+  @media only screen and (max-width: 1000px) {
+    .growls {
+      height: 100%;
+      width: 100%;
+      overflow-y: scroll; } }
+
+.growl {
+  padding: 0;
+  width: 280px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: #4C99FF !important;
+  z-index: 99999999999;
+  text-align: center;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  font-weight: 600 !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .growl svg, .growl img {
+    margin-bottom: 10px; }
+  .growl .logo-color {
+    fill: #324048; }
+  .growl p {
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0;
+    color: #fff; }
+  @media only screen and (max-width: 1000px) {
+    .growl {
+      right: 50%;
+      margin-right: -140px;
+      bottom: auto;
+      top: 90px; } }
+
+.growl-inner {
+  padding: 20px; }
+  .growl-inner h4 {
+    color: #1d252a;
+    margin-bottom: 10px;
+    font-size: 30px; }
+  .growl-inner .fa-check {
+    color: #31F9CE; }
+  .growl-inner .fa-times {
+    color: #F90069; }
 
 @font-face {
   font-family: 'FontAwesome';
@@ -3022,3 +3116,39 @@ body {
   margin: 0;
   overflow: visible;
   clip: auto; }
+
+.memes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px; }
+
+.meme-card {
+  width: calc(25% - 10px);
+  background: #d8dcdf;
+  margin-bottom: 12px; }
+
+.meme-card--top a {
+  width: 50%;
+  float: left;
+  text-align: center;
+  color: #1d252a;
+  font-size: 13px;
+  line-height: 1;
+  padding: 10px 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+  .meme-card--top a:first-child {
+    border-right: 1px solid #bcc2c8; }
+
+.meme-card--img img {
+  width: 100%; }
+
+.meme-card--info {
+  text-align: center;
+  line-height: 1;
+  padding: 10px 0;
+  font-size: 13px; }
