@@ -8,6 +8,7 @@ gem 'uglifier'
 gem 'coffee-rails'
 gem 'turbolinks'
 gem 'jbuilder'
+gem 'jquery-rails'
 
 gem 'awesome_print'
 gem 'dotenv-rails', :github => 'bkeepers/dotenv'
