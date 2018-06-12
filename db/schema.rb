@@ -10,16 +10,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180612201532) do
+ActiveRecord::Schema.define(version: 20180612201809) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "downvotes", force: :cascade do |t|
+    t.integer "meme_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "memes", force: :cascade do |t|
     t.string "img_url"
     t.integer "upvotes_count", default: 0
     t.integer "downvotes_count", default: 0
     t.boolean "featured", default: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "upvotes", force: :cascade do |t|
+    t.integer "meme_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
