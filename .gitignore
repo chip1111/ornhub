@@ -19,6 +19,7 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+*.codekit3
 
 /node_modules
 /yarn-error.log
