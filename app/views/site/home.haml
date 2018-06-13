@@ -16,6 +16,8 @@
 
         .meme-card
           .meme-card--top
+            -#TODO: Restrict number of votes a meme can receive in 24 hours
+            -#      to avoid bots or scripts overloading the DB.
             = link_to "Upvote", meme_upvote_path(meme)
             = link_to "Downvote", meme_downvote_path(meme)
           .meme-card--img
