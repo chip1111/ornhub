@@ -1,6 +1,6 @@
 class MemesController < ApplicationController
 
-  before_action :find_meme, only: [:show, :edit, :update, :destroy]
+  before_action :find_meme, only: [:show, :destroy]
 
   def show
   end
@@ -16,12 +16,6 @@ class MemesController < ApplicationController
     else
       render 'new'
     end
-  end
-
-  def edit
-  end
-
-  def update
   end
 
   def destroy

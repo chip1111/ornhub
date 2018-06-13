@@ -6,6 +6,10 @@
       OrnHub
       = link_to "New Ornmeme", new_meme_path, class: "button"
 
+    %p
+      Your IP:
+      = request.remote_ip
+
     .memes-container
 
       - Meme.all.sort_by{|m| m.total_score}.reverse.each do |meme|
@@ -19,3 +23,6 @@
           .meme-card--info
             Score:
             = meme.total_score
+
+      - 3.times do
+        .meme-card.empty-card
