@@ -1,0 +1,73 @@
+// MIXINS
+
+@mixin font-smoothing
+  font-weight: normal !important
+  font-style: normal !important
+  -moz-osx-font-smoothing: grayscale !important
+  -webkit-font-smoothing: antialiased !important
+  font-smoothing: antialiased !important
+
+@mixin rounded($radius)
+  -webkit-border-radius: $radius
+  -moz-border-radius: $radius
+  border-radius: $radius
+
+@mixin shadow($x,$y,$blur,$color)
+  -webkit-box-shadow: $x $y $blur $color
+  -moz-box-shadow: $x $y $blur $color
+  -o-box-shadow: $x $y $blur $color
+  box-shadow: $x $y $blur $color
+
+@mixin animation($property,$length,$easing)
+  -webkit-animation: $property $length $easing
+  -moz-animation: $property $length $easing
+  -o-animation: $property $length $easing
+  animation: $property $length $easing
+
+@mixin cover
+  -webkit-background-size: cover !important
+  -moz-background-size: cover !important
+  -ms-background-size: cover !important
+  -o-background-size: cover !important
+  background-size: cover !important
+
+@mixin border-box
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  -ms-box-sizing: border-box
+  -o-box-sizing: border-box
+  box-sizing: border-box
+
+@mixin transition($property,$length)
+  -webkit-transition: $property $length ease-out
+  -moz-transition: $property $length ease-out
+  transition: $property $length ease-out
+
+@mixin truncate($width)
+  width: $width
+  white-space: nowrap
+  overflow: hidden
+  text-overflow: ellipsis
+
+@mixin gradient($from, $to)
+  background-color: $to !important
+  background-image: -moz-linear-gradient($from, $to) !important
+  background-image: -o-linear-gradient($from, $to) !important
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $from), color-stop(1, $to)) !important
+  background-image: -webkit-linear-gradient($from, $to) !important
+  background-image: -ms-linear-gradient($from, $to) !important
+  background-image: linear-gradient($from, $to) !important
+
+
+// RESPONSIVE
+
+@mixin breakpoint($width)
+  @if $width == mobile
+    @media only screen and (max-width: $mobile)
+      @content
+  @else if $width == tablet
+    @media only screen and (max-width: $tablet)
+      @content
+  @else if $width == desktop
+    @media only screen and (min-width: $tablet)
+      @content

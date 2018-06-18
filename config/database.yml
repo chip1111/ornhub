@@ -1,0 +1,11 @@
+common: &common
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
+
+development:
+  <<: *common
+  database: ornhub
+
+production:
+  pool: <%= ENV["DB_POOL"] || 5 %>

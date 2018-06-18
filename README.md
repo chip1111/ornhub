@@ -14,12 +14,12 @@ Key user features:
 
 Other considerations:
 
-- Do we actually want it to look like pornhub? 
+- Do we actually want it to look like pornhub?
 - Do we want to include the explicit Ornmemes (I think a lot of them are a bit much tbh)
 - What framework are we going to build this on that is going to enable as many people as possible to collaborate on? Ruby on Rails is the only one I've ever worked with, but open to all thoughts.
-- How are we going to divide the work? 
+- How are we going to divide the work?
 
-I'm going to wireframe the site on Sketch now, but if anyone wants to start with back-end work, just let me know! 
+I'm going to wireframe the site on Sketch now, but if anyone wants to start with back-end work, just let me know!
 
 ### Team Communication
 [Slack workspace invite link](https://join.slack.com/t/ornsquad/shared_invite/enQtMzc0NTU5MTEzNDQyLTY0Y2I0MDQ0ZTk0MDdhNjRkYmM3MjliMjM1YjdmMmI4Mjc2YzU2YzhiYzgxMGM4N2Y0Y2JkOWI3ODU0MjU0ODQ)
